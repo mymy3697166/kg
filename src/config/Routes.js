@@ -18,7 +18,18 @@ const TabHomeNavigator = TabNavigator({
   ArticleList: {screen: ArticleListController},
   CommunityHome: {screen: CommunityHomeController}
 }, {
-  tabBarOptions: {activeTintColor: '#23aeeb'}
+  tabBarOptions: {
+    inactiveTintColor: '#888',
+    activeTintColor: '#23aeeb',
+    style: {backgroundColor: '#fff'},
+    indicatorStyle: {height: 0},
+    labelStyle: {margin: 0, fontSize: 12, marginTop: 3},
+    tabStyle: {paddingBottom: 0},
+    showIcon: true
+  },
+  tabBarPosition: 'bottom',
+  swipeEnabled: false,
+  animationEnabled: false
 });
 // 主栈
 const StackMainNavigator = StackNavigator({

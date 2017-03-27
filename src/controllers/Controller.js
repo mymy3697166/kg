@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dimensions } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 import db from '../config/Db';
 import { URLs } from '../config/Constants';
 import DataCache from '../models/DataCache';
@@ -15,6 +15,8 @@ export default class Controller extends Component {
     this.urls = URLs;
     this.cache = DataCache;
   }
+
+  osIsOS
 
   post(url, forms) {
     let token = 'BBA8A2567B5095FEF4E316F532903571';

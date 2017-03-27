@@ -2,17 +2,13 @@ import React from 'react';
 import Controller from '../Controller';
 import { ListView } from 'react-native';
 import { ArticleListView, TabIconView } from '../../views/article/ArticleListView';
+import { ShareStyles } from '../../views/ShareStyles.js';
 
 export default class ArticleListController extends Controller {
   static navigationOptions = {
     title: '干货',
-    header: {
-      style: {backgroundColor: '#ffffff'}
-    },
-    tabBar: {
-      label: '干货',
-      icon: TabIconView
-    }
+    header: {style: ShareStyles.stackNavigatorHeader, titleStyle: ShareStyles.stackNavigatorHeaderTitle},
+    tabBar: {label: '干货', icon: TabIconView}
   }
   
   constructor(props) {

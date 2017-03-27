@@ -30,23 +30,23 @@ let ArticleListItemView = ({...props}) => (
 );
 // 主界面
 export const ArticleListView = ({...props}) => (
-    <ListView
-      style={styles.listViewBg}
-      dataSource={props.dataSource}
-      renderRow={(rowData) => (<ArticleListItemView rowData={rowData} onMainPress={props.onMainPress} onCommentPress={props.onCommentPress} />)}
-      renderFooter={() => <Text style={styles.footer}>{props.hasMore ? '正在加载...' : '没有更多了'}</Text>}
-      onEndReached={() => props.onEndReached()}
-      onEndReachedThreshold={0}
-      enableEmptySections={true}
-      refreshControl={
-        <RefreshControl
-          refreshing={props.isRefreshing}
-          onRefresh={() => props.onRefresh()}
-          tintColor={"#999"}
-          colors={['#999']}
-        />
-      }
-    />
+  <ListView
+    style={styles.listViewBg}
+    dataSource={props.dataSource}
+    renderRow={(rowData) => (<ArticleListItemView rowData={rowData} onMainPress={props.onMainPress} onCommentPress={props.onCommentPress} />)}
+    renderFooter={() => <Text style={styles.footer}>{props.hasMore ? '正在加载...' : '没有更多了'}</Text>}
+    onEndReached={() => props.onEndReached()}
+    onEndReachedThreshold={0}
+    enableEmptySections={true}
+    refreshControl={
+      <RefreshControl
+        refreshing={props.isRefreshing}
+        onRefresh={() => props.onRefresh()}
+        tintColor={"#999"}
+        colors={['#999']}
+      />
+    }
+  />
 );
 // 样式
 const styles = StyleSheet.create({
