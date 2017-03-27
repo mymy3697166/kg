@@ -1,4 +1,5 @@
 let baseURL = 'http://www.renjk.com/';
 export const URLs = {
-  FETCHARTICLES: baseURL + '/api_v2/health_article/fetch_articles'
+  FETCHARTICLES: baseURL + '/api_v2/health_article/fetch_articles',
+  FETCHARTICLE: baseURL + '/api_v2/health_article/fetch_article'
 };

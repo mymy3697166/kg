@@ -16,10 +16,10 @@ export const ArticleView = ({...props}) => {
       <ScrollView style={{}}>
         <Image style={{width: width, height: width * 0.6}} source={{uri: 'http://assets.renjk.com/health/' + data.cover}} />
         <Text style={{padding: 10, fontSize: 18, lineHeight: 24, textAlign: 'justify'}}>{data.title}</Text>
-        <View style={{padding: 10, paddingTop: 0}}>
+        <View style={{padding: 10, paddingTop: 10}}>
           <Image style={{width: 40, height: 40, borderRadius: 20}} source={{uri: 'http://assets.renjk.com/mem/' + data.author_avatar}} />
-          <Text style={{position: 'absolute', top: 0, left: 60}}>{data.author_name}</Text>
-          <Text style={{position: 'absolute', bottom: 10, left: 60}}>{formatDate(data.created_at)}</Text>
+          <Text style={{position: 'absolute', top: 10, left: 60, color: '#555'}}>{data.author_name}</Text>
+          <Text style={{position: 'absolute', bottom: 14, left: 60, color: '#999', fontSize: 12}}>{formatDate(data.created_at)}</Text>
         </View>
       </ScrollView>
       <View style={styles.header}>
