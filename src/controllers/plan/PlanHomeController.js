@@ -12,6 +12,7 @@ export default class PlanHomeController extends Controller {
 
   constructor(props) {
     super(props);
+    console.log(require('../../assets/icon_back.png'));
   }
 
   onPress() {
